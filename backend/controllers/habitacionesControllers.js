@@ -47,12 +47,6 @@ const updateHabitacion = asyngHandler(async (req, res) => {
         mensaje: `Habitacion con numero ${numero} actualizada`,
         habitacion: habitacionActualizada
     })
-
-    res.status(200).json({ mensaje: `Habitacion con id ${req.params.id} actualizada` });
-
-
-
-
 });
 
 const deleteHabitacion = asyngHandler(async (req, res) => {

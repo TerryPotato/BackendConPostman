@@ -2,8 +2,8 @@
   "name": "proyecto2dop",
   "version": "1.0.0",
   "scripts": {
-    "start": "node backend/servers.js",
-    "server": "nodemon backend/servers.js"
+  "start": "node backend/servers.js",
+  "server": "nodemon backend/servers.js"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
@@ -14,11 +14,15 @@
     "express": "^5.1.0",
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^9.0.2",
-    "mongodb": "^6.15.0",
+    "mongodb": "^6.16.0",
     "mongoose": "^8.13.2"
+    
   },
   "devDependencies": {
     "@types/node": "^22.15.3",
     "nodemon": "^3.1.10"
-  }
+  },
+  "engines": {
+  "node": "18.17.0"
+}
 }
