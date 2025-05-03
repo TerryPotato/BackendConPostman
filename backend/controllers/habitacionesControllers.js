@@ -18,7 +18,10 @@ const createHabitacion = asyngHandler(async (req, res) => {
         tipo,
         precio
     });
-    res.status(201).json({ habitacion });
+    res.status(201).json({ 
+        mensaje: "Habitacion creada",
+        habitacion
+    });
 });
 
 const updateHabitacion = asyngHandler(async (req, res) => {

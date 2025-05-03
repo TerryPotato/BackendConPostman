@@ -6,7 +6,7 @@ const { getHabitaciones, createHabitacion, updateHabitacion, deleteHabitacion } 
 router.get('/', getHabitaciones);
 // Creamos una habitación
 router.post('/', createHabitacion);
-// Modificamos una habitación
+// Modificamos la disponibilidad de una habitación
 router.put('/', updateHabitacion);
 // Eliminamos una habitación
 router.delete('/', deleteHabitacion);
