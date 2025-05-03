@@ -1,29 +1,27 @@
-const express = require('express');
-const dotenv = require('dotenv');
-const colors = require('colors');
-const connectDB = require('./config/db');
+const express = require("express");
+const dotenv = require("dotenv");
+const colors = require("colors");
+const connectDB = require("./config/db");
 
-dotenv.config();
+dotenv.config(); // Carga las variables de entorno
 
 const app = express();
-
 const PORT = process.env.PORT || 8000;
 
-app.listen(PORT, () => {
-  console.log(`Servidor corriendo en el puerto ${PORT}`);
-});
-
-connectDB();
+connectDB(); // Conectar a MongoDB
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use('/api/habitaciones', require('./routes/habitacionesRoutes'));
+// Configuración de rutas
+app.use("/api/habitaciones", require("./routes/habitacionesRoutes"));
 
-app.get('/', (req, res) => {
-    res.send('API is running...');
+// Ruta principal
+app.get("/", (req, res) => {
+  res.send("API is running...");
 });
 
+// **Corrección: Solo una llamada a app.listen**
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`.yellow.bold);
+  console.log(`Servidor corriendo en el puerto ${PORT}`.yellow.bold);
 });
